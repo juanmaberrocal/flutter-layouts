@@ -26,7 +26,42 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter layout demo'),
         ),
         body: Center(
-          child: Text('Hello world')
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Image.asset('images/pic1.jpg'),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Image.asset('images/pic1.jpg'),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Image.asset('images/pic2.jpg'),
+                  ),
+                  Expanded(
+                    child: Image.asset('images/pic3.jpg'),
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(Icons.star, color: Colors.green[500]),
+                      Icon(Icons.star, color: Colors.green[500]),
+                      Icon(Icons.star, color: Colors.green[500]),
+                      Icon(Icons.star, color: Colors.black),
+                      Icon(Icons.star, color: Colors.black),
+                    ],
+                  ),
+                ],
+              ),
+              Expanded(
+                child: Image.asset('images/pic3.jpg'),
+              ),
+            ],
+          ),
         )
       ),
     );
